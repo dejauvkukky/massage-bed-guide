@@ -26,6 +26,12 @@ function closeModal() {
 function resetToMain() {
   document.getElementById('menu-screen').style.display = 'none';
   document.getElementById('main-screen').style.display = 'block';
+
+  // 유튜브 영상을 다시 로딩 (src 재설정)
+  const promoVideo = document.getElementById('promo-video');
+  const newSrc = "https://www.youtube.com/embed/rvZAn6mI02o?autoplay=1&mute=1&loop=1&playlist=rvZAn6mI02o&controls=0&modestbranding=1&rel=0&playsinline=1";
+  promoVideo.src = "";                 // 먼저 src를 비워주고
+  promoVideo.src = newSrc;            // 다시 설정
 }
 
 function resetIdleTimer() {
